@@ -884,7 +884,7 @@ int32_t GxuFontCreateFont(const char* name, float fontHeight, CGxFont*& face, ui
         flags |= 1;
     }
 
-    int32_t result = newFace->Initialize(name, flags, fontHeight);
+    int32_t result = newFace->Initialize(name, flags | 0x14, fontHeight);
 
     if (!result) {
         g_fonts.DeleteNode(newFace);
